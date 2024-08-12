@@ -1,0 +1,95 @@
+
+/* Navbar Customization */
+.navbarTop {
+  background: linear-gradient(90deg, #78909c, #455a64);
+  padding: 10px 0;
+  border-bottom: 3px solid #78909c;
+}
+
+.dashboard {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Logout Button */
+.logout button {
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout button:hover {
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+
+/* Total Files Title */
+.totalFile {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* File List Customization */
+ul {
+  padding: 10px 10px;
+}
+.custom-file-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+ul span {
+  color: #007bff;
+  font-size: 20px;
+  font-weight: bold;
+}
+ul span small {
+  color: #000;
+  font-size: 16px;
+}
+.custom-file-item:hover {
+  background-color: #e2e6ea;
+  transform: translateY(-3px);
+}
+
+/* Badge Customization */
+.typeFile {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+@media (max-width: 767px)  {
+  .dashboard {
+    font-size: 1.5rem;
+  }
+  ul li {
+    flex-direction: column;
+  }
+  .nameFile {
+    font-size: 16px;
+  }
+  .typeFile {
+    margin-top: 15px ;
+  }
+}
+
+@media (max-width: 576px) {
+  ul li {
+    padding: 15px 0;
+  }
+  .nameFile {
+    font-size: 14px;
+  }
+  .typeFile {
+    margin-top: 14px ;
+  }
+}

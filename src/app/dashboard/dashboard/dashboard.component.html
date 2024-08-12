@@ -1,0 +1,25 @@
+<!-- Navbar -->
+<div class="navbarTop bg bg-dark text-white" data-aos="fade-right" data-aos-duration="1000" >
+  <div class="container pt-2 pb-2">
+    <div class="row align-items-center">
+      <div class="col-6 dashboard">Dashboard</div>
+      <div class="col-6 d-flex justify-content-end logout">
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <!-- Total Files -->
+  <h2 class="totalFile text-center text-primary mb-4" data-aos="zoom-in" data-aos-duration="1500">Total Files: {{ totalFiles }}</h2>
+
+  <!-- Name File -->
+  <ul class="list-group shadow" data-aos="fade-left" data-aos-duration="2000">
+    <li *ngFor="let file of files ; let i = index " class="list-group-item d-flex justify-content-between align-items-center custom-file-item">
+      <span class="nameFile "> {{ i+1 }} -  Name File : <small> {{ file.name | slice : 0 : 15 }}</small> </span>
+      <span class="typeFile ">Type File : <small>{{ file.type }}</small> </span>
+    </li>
+  </ul>
+</div>

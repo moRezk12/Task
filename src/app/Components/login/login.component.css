@@ -1,0 +1,56 @@
+
+/* Body Customization */
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+/* Title Customization */
+.title {
+  background: linear-gradient(90deg, #003366, #0066cc);
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  padding: 15px;
+}
+
+/* Form Customization */
+form {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 0 0 10px 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Customization */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+/* Alert Customization */
+.alert {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Button Customization */
+.btn-primary {
+  background-color: #003366;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #002244;
+  transform: scale(1.05);
+}
+
+.btn-primary .fa-spinner {
+  margin-left: 5px;
+}

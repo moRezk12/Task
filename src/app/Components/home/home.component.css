@@ -1,0 +1,171 @@
+/* .logout {
+  text-align: right;
+}
+li {
+  border: 1px solid gray;
+  padding: 15px 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* li {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* @media (max-width: 767px) {
+  li{
+    display: block;
+    text-align: center;
+  }
+  li span {
+    margin: 15px 0;
+  }
+  button {
+    margin: 15px 0 10px;
+  } */
+
+/* } */
+/*  */
+
+/* Body Background */
+body {
+  background-color: #e0e0e0; /* Neutral gray background */
+}
+
+/* NavBar Customization */
+.bg-navbar {
+  background: linear-gradient(90deg, #78909c, #455a64); /* Gradient from medium gray-blue to darker gray-blue */
+  padding: 10px 0;
+  border-bottom: 3px solid #78909c; /* Medium gray-blue underline */
+}
+
+.navbar-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Logout Button */
+.btn-logout {
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+/* Label Customization */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.form-group label:hover {
+  color: #007bff;
+}
+
+/* Label for the input */
+.form-group input[type="text"],
+.form-group input[type="file"] {
+  width: 100%;
+}
+
+/* Search Input Customization */
+.search-input {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Placeholder Style */
+.search-input::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+/* File List Customization */
+.custom-file-item {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-file-item:hover {
+  background-color: #f1f3f5;
+  transform: translateY(-3px);
+}
+
+/* Button Group Customization */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-view {
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+
+.btn-download {
+  background-color: #28a745;
+  border: none;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+}
+
+.btn-view:hover {
+  background-color: #0056b3;
+}
+
+.btn-download:hover {
+  background-color: #218838;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 576px) {
+  .list-files {
+    flex-direction: column;
+  }
+  .button-group {
+    margin-top: 15px;
+  }
+}

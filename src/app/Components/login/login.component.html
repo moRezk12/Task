@@ -1,0 +1,45 @@
+
+<div class="body pt-5" data-aos="flip-left"
+data-aos-easing="ease-out-cubic"
+data-aos-duration="2000">
+
+  <div class="container d-flex justify-content-center ">
+    <div class="row justify-content-center w-100">
+      <div class="col-md-8">
+        <div class="title p-3 text-center">
+          <h2>Login</h2>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="p-4 bg-light ">
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="username">Email</label>
+            <input type="email" class="form-control" id="username" formControlName="username">
+            <div *ngIf="(loginForm.get('username')?.touched && loginForm.get('username')?.errors)" class="alert alert-danger mt-2">
+              <p *ngIf="loginForm.get('username')?.getError('required')">Email is required</p>
+              <p *ngIf="loginForm.get('username')?.getError('email')">Invalid email format</p>
+            </div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-group mt-3">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <div *ngIf="(loginForm.get('password')?.touched && loginForm.get('password')?.errors)" class="alert alert-danger mt-2">
+              <p *ngIf="loginForm.get('password')?.getError('required')">Password is required</p>
+              <p *ngIf="loginForm.get('password')?.getError('pattern')">Password must be at least 6 characters</p>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary mt-3 w-100" [disabled]="loginForm.invalid">
+            Login
+            <span *ngIf="isLoading">
+              <i class="fa fa-spinner fa-spin"></i>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

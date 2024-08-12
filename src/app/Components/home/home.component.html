@@ -1,0 +1,46 @@
+
+<!-- NavBar -->
+<div class="bg-navbar text-white" data-aos="fade-right" data-aos-duration="1000">
+  <div class="container pt-2 pb-2">
+    <div class="row align-items-center">
+      <div class="col-6 col-md-6">
+        <h1 class="navbar-title">Home</h1>
+      </div>
+      <div class="col-6 col-md-6 d-flex justify-content-end">
+        <button class="btn btn-primary btn-logout " (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Show Pdf -->
+<div class="container mt-4">
+  <!-- Search Pdf -->
+  <div class="form-group my-3" data-aos="fade-down-right" data-aos-duration="1500">
+    <label for="username">Search</label>
+    <input type="text" class="form-control search-input" [(ngModel)]="termInput" id="username" placeholder="Search for a file...">
+  </div>
+
+  <!-- Show Data -->
+  <div class="form-group mb-4" data-aos="fade-down-left" data-aos-duration="2000">
+    <input type="file" class="form-control-file file-input" (change)="addFile($event)" accept="application/pdf">
+  </div>
+
+
+  <ul class="list-group" data-aos-duration="5000">
+    <li *ngFor="let file of files | search : termInput" class="list-group-item custom-file-item"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="2000"  >
+      <div class="list-files d-flex justify-content-between align-items-center">
+        <span>{{ file.name }}</span>
+        <div class="button-group">
+          <button class="btn btn-view btn-sm" (click)="viewFile(file)">View</button>
+          <button class="btn btn-download btn-sm" (click)="downloadFile(file)">Download</button>
+          <button class="btn btn-delete btn-sm" (click)="removeFile(file)">Delete</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
